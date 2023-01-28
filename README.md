@@ -5,6 +5,4 @@
 
 # DEPENDENCIES: https://github.com/JayMontana36/mythic_notify *You must download and have "ensure mythic_notify" in your server for the script work.
 
-# It's STANDALONE.
-
 # PREVIEW: https://streamable.com/uerfbl
