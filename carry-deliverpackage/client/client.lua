@@ -31,6 +31,27 @@ RegisterCommand("pack", function()
     end
 end, false)
 
+
+RegisterCommand("deleteprop", function()
+    if holdingProp then
+        holdingProp = false
+        DetachEntity(prop, 1, 1)
+        DeleteObject(prop)
+        ClearPedTasks(GetPlayerPed(GetPlayerId()))
+        TriggerEvent("mythic_notify:client:SendAlert", { type = "inform", text = "You have deleted the package", length = 10000 })
+    else
+        local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
+        prop = GetClosestObjectOfType(x, y, z, 2.0, GetHashKey("prop_cs_box_clothes"), 0, 0, 0)
+        if prop ~= 0 then
+            DeleteObject(prop)
+            TriggerEvent("mythic_notify:client:SendAlert", { type = "inform", text = "You have deleted the package", length = 10000 })
+        else
+            TriggerEvent("mythic_notify:client:SendAlert", { type = "error", text = "No prop found nearby", length = 10000 })
+        end
+    end
+end, false)
+
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
