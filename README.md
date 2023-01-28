@@ -1,4 +1,10 @@
-# CARRY AND DELIVER PACKAGE RESOURCE
+# CARRY AND DELIVER PACKAGE RESOURCE STANDALONE
 
 
-# A Simple carry and deliver package with proper animation and notify, that can be used standalone or implemented in some job.
+# A Simple resource with proper animation and notify, that can be used the way it is or implemented in some job.
+
+# DEPENDENCIES: https://github.com/JayMontana36/mythic_notify *You must download and have "ensure mythic_notify" in your server for the script work.
+
+# It's STANDALONE.
+
+# PREVIEW: https://streamable.com/uerfbl
